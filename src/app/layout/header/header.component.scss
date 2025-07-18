@@ -1,0 +1,25 @@
+.navbar {
+    background-color: #ffffff;
+    padding: 10px;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    box-shadow: 1px 4px 10px -2px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 1px 4px 10px -2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 1px 4px 10px -2px rgba(0, 0, 0, 0.75);
+}
+
+.apptitle-container {
+    width: 14rem;
+    padding: 10px 10px 10px 10px;
+}
+
+.apptitle {
+    text-align: center;
+    color: black;
+    font-size: x-large;
+
+}

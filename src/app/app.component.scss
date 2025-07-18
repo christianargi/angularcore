@@ -1,0 +1,30 @@
+.main-container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
+    
+}
+
+.header {
+    width: 100%;
+    background-color: #ffffff;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    flex-shrink: 0;
+    
+}
+
+.main-content {
+    flex: 1;
+    overflow-y: auto;
+    background-color: rgb(240, 240, 240);
+}
