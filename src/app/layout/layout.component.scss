@@ -1,0 +1,82 @@
+// .main-container {
+//     display: flex;
+//     height: 100vh;
+//     overflow: hidden;
+// }
+
+// .content-wrapper {
+//     display: flex;
+//     flex-direction: column;
+//     flex: 1;
+//     overflow: hidden;
+
+// }
+
+// .header {
+//     width: 100%;
+//     background-color: #ffffff;
+//     color: white;
+//     display: flex;
+//     align-items: center;
+//     padding: 0 20px;
+//     flex-shrink: 0;
+
+// }
+
+// .main-content {
+//     flex: 1;
+//     overflow-y: auto;
+//     background-color: rgb(240, 240, 240);
+
+// }
+
+.example-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.example-radio-group {
+    display: block;
+    border: 1px solid #555;
+    margin: 20px;
+    padding: 10px;
+}
+
+.example-sidenav-content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.example-sidenav {
+    user-select: none;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.menu-button {
+    transition: 300ms ease-in-out;
+    transform: rotate(0deg);
+}
+
+.menu-button.rotated {
+    transform: rotate(180deg);
+}
+
+.submenu {
+    overflow-y: hidden;
+    transition: transform 300ms ease;
+    transform: scaleY(0);
+    transform-origin: top;
+    padding-left: 30px;
+}
+
+.submenu.expanded {
+    transform: scaleY(1);
+}

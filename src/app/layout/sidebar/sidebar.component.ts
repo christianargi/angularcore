@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {
   faBookmark,
@@ -10,7 +11,7 @@ import {
 @Component({
   selector: 'app-sidebar',
   standalone: true,
-  imports: [FontAwesomeModule], // ✅ Tambahkan ini
+  imports: [FontAwesomeModule, RouterLink], // ✅ Tambahkan ini
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.scss'], // kita betulkan ini nanti di Error #2
 })

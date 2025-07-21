@@ -8,10 +8,8 @@ import { AboutComponent } from './pages/about/about.component';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet, SidebarComponent, HeaderComponent],
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  template: '<router-outlet />',
+  imports: [RouterOutlet],
 })
 export class AppComponent {
   title = 'angular-core';

@@ -1,0 +1,45 @@
+
+<mat-sidenav-container class="example-container">
+    <!-- <mat-sidenav #sidenav [mode]="'side'" isOpen=true>
+        <app-sidebar></app-sidebar>
+    </mat-sidenav> -->
+
+    <mat-sidenav #sidenav class="example-sidenav" mode="side" opened="true" (mouseenter)="mouseenter()"
+        (mouseleave)="mouseleave()">
+        <mat-nav-list>
+            <mat-list-item (click)="showSubmenu = !showSubmenu" class="parent">
+                <mat-icon mat-list-icon>home</mat-icon>
+                <span class="full-width" *ngIf="isExpanded || isShowing">Parent Menu</span>
+                <mat-icon class="menu-button" [ngClass]="{'rotated' : showSubmenu}"
+                    *ngIf="isExpanded || isShowing">expand_more</mat-icon>
+            </mat-list-item>
+            <div class="submenu" [ngClass]="{'expanded' : showSubmenu}" *ngIf="isShowing || isExpanded">
+                <a mat-list-item routerLink="/">Dashboard</a>
+                <a mat-list-item routerLink="/about">About</a>
+                <mat-list-item (click)="showSubSubMenu = !showSubSubMenu" class="parent">
+                    <span class="full-width" *ngIf="isExpanded || isShowing">Nested Menu</span>
+                    <mat-icon class="menu-button" [ngClass]="{'rotated' : showSubSubMenu}"
+                        *ngIf="isExpanded || isShowing">expand_more</mat-icon>
+                </mat-list-item>
+                <div class="submenu" [ngClass]="{'expanded' : showSubSubMenu}" *ngIf="isShowing || isExpanded">
+                    <mat-list-item>SubSubmenu Item 1</mat-list-item>
+                    <mat-list-item>SubSubmenu Item 2</mat-list-item>
+                </div>
+            </div>
+        </mat-nav-list>
+        <mat-nav-list>
+        </mat-nav-list>
+    </mat-sidenav>
+    
+    <mat-sidenav-content>
+        <div class="content-wrapper">
+            <div class="main-content">
+                <header class="header">
+                    <app-header [sidenav]="sidenav"></app-header>
+                </header>
+                <router-outlet></router-outlet>
+            </div>
+            <p><button matButton (click)="sidenav.toggle()">Toggle</button></p>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
