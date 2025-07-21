@@ -1,7 +1,7 @@
 <div class="app-logo">APP LOGO</div>
 <mat-nav-list>
     <mat-list-item (click)="showSubmenu = !showSubmenu" class="parent">
-        <mat-icon mat-list-icon>home</mat-icon>
+        <!-- <mat-icon class="icon" mat-list-icon>home</mat-icon> -->
         <span class="full-width" *ngIf="isExpanded || isShowing">Parent Menu</span>
         <mat-icon class="menu-button" [ngClass]="{ 'rotated': showSubmenu }" *ngIf="isExpanded || isShowing">
             expand_more

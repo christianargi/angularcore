@@ -45,18 +45,8 @@ ul {
 }
 
 .example-container {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
-
-.example-radio-group {
-    display: block;
-    border: 1px solid #555;
-    margin: 20px;
-    padding: 10px;
+    height: 500px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 .example-sidenav-content {
@@ -68,24 +58,22 @@ ul {
 
 .example-sidenav {
     user-select: none;
-    background-color: #ffffff;
-    box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.2);
-    border-radius: 0%;
 }
 
 .full-width {
     width: 100%;
-    align-items: center;
-    justify-items: center;
+    padding-bottom: 20px;
 }
 
 .menu-button {
+    padding-left: 30px;
     transition: 300ms ease-in-out;
     transform: rotate(0deg);
 }
 
 .menu-button.rotated {
     transform: rotate(180deg);
+        padding-right: 30px;
 }
 
 .submenu {
@@ -107,10 +95,4 @@ ul {
     align-items: center;
     justify-content: center;
     display: flex;
-}
-
-.test {
-    display: flex;
-    align-items: center;
-    justify-items: center;
 }

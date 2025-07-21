@@ -4,13 +4,6 @@
 //     overflow: hidden;
 // }
 
-// .content-wrapper {
-//     display: flex;
-//     flex-direction: column;
-//     flex: 1;
-//     overflow: hidden;
-
-// }
 
 // .header {
 //     width: 100%;
@@ -82,4 +75,8 @@
 
 .submenu.expanded {
     transform: scaleY(1);
+}
+
+.root-container{
+    padding: 20px;
 }
