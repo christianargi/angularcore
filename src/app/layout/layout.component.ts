@@ -31,21 +31,20 @@ function isOverflown(element: HTMLElement) {
     ReactiveFormsModule,
     RouterOutlet,
     RouterLink,
-    // SidebarComponent,
+    SidebarComponent,
     MatListModule,
     MatIconModule,
     MatToolbarModule,
-    CommonModule
+    CommonModule,
   ],
   standalone: true,
 })
 export class DefaultLayoutComponent {
   @ViewChild('sidenav') sidenav!: MatSidenav;
-  isExpanded = true;
+  isExpanded: boolean = true;
   showSubmenu: boolean = false;
   isShowing = false;
   showSubSubMenu: boolean = false;
-
   mouseenter() {
     if (!this.isExpanded) {
       this.isShowing = true;

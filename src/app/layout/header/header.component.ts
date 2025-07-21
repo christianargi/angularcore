@@ -3,6 +3,8 @@ import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDrawerMode, MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatButtonModule } from '@angular/material/button';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @Component({
   selector: 'app-header',
@@ -15,9 +17,11 @@ import { MatButtonModule } from '@angular/material/button';
     MatRadioModule,
     FormsModule,
     ReactiveFormsModule,
+    FontAwesomeModule,
   ],
 })
 export class HeaderComponent {
   appName = 'MyApp';
   @Input() sidenav!: MatSidenav;
+  bars = faBars;
 }

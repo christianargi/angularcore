@@ -1,6 +1,6 @@
 .navbar {
     background-color: #ffffff;
-    padding: 10px;
+    padding: 5px 10px 15px 10px;
     height: 50px;
     top: 0;
     left: 0;
@@ -8,16 +8,24 @@
     box-shadow: 1px 4px 10px -2px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: 1px 4px 10px -2px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 1px 4px 10px -2px rgba(0, 0, 0, 0.75);
+    align-items: center;
 }
 
 .apptitle-container {
     width: 14rem;
     padding: 10px 10px 10px 10px;
+    align-items: center;
+    display: flex;
+    justify-items: center;
 }
 
 .apptitle {
     text-align: center;
     color: black;
     font-size: x-large;
+}
 
+.toggle-menu{
+    color: black;
+    font-size: large;
 }
