@@ -6,6 +6,7 @@ import { CardComponent } from './components/card/card.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { AboutComponent } from './pages/about/about.component';
 
+
 @Component({
   selector: 'app-root',
   template: '<router-outlet />',

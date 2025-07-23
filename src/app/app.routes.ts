@@ -1,6 +1,12 @@
 import { Routes } from '@angular/router';
+import { LoginComponent } from './pages/login/login.component';
+import { authGuard } from './services/auth.guard';
 
 export const routes: Routes = [
+  {
+    path: 'login',
+    component: LoginComponent,
+  },
   {
     path: '',
     redirectTo: 'dashboard',
@@ -10,6 +16,7 @@ export const routes: Routes = [
     path: '',
     loadComponent: () =>
       import('./layout').then((m) => m.DefaultLayoutComponent),
+    canActivate: [authGuard], // ✅ Proteksi semua route di dalam layout
     children: [
       {
         path: 'dashboard',
@@ -21,7 +28,11 @@ export const routes: Routes = [
         loadChildren: () =>
           import('./pages/about/routes').then((m) => m.routes),
       },
-      { path: '**', redirectTo: 'dashboard' },
     ],
+  },
+  // ✅ Fallback 404
+  {
+    path: '**',
+    redirectTo: 'dashboard',
   },
 ];

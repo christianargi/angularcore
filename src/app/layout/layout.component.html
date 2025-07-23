@@ -1,17 +1,18 @@
 <mat-sidenav-container class="example-container">
-    <!-- <mat-sidenav #sidenav [mode]="'side'" isOpen=true>
-        <app-sidebar></app-sidebar>
-    </mat-sidenav> -->
-
-    <mat-sidenav #sidenav class="example-sidenav" mode="side" opened="true" (mouseenter)="mouseenter()"
-        (mouseleave)="mouseleave()">
+    <!-- Sidebar -->
+    <mat-sidenav #sidenav class="example-sidenav" [mode]="isMobile ? 'over' : 'side'"
+        [opened]="isMobile ? isSidebarOpen : isExpanded" (mouseenter)="mouseenter()" (mouseleave)="mouseleave()"
+        (backdropClick)="isSidebarOpen = false">
         <app-sidebar></app-sidebar>
     </mat-sidenav>
+
+    <!-- Main content -->
     <mat-sidenav-content>
         <div class="content-wrapper">
             <div class="main-content">
                 <header class="header">
-                    <app-header [sidenav]="sidenav"></app-header>
+                    <!-- Send the sidenav to header if needed -->
+                    <app-header [sidenav]="sidenav" (toggleSidebar)="toggleSidebar()"></app-header>
                 </header>
                 <div class="root-container">
                     <router-outlet></router-outlet>

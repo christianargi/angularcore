@@ -31,7 +31,6 @@ import { CommonModule } from '@angular/common';
     MatRadioModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterLink,
     // SidebarComponent,
     MatListModule,
     MatIconModule,
